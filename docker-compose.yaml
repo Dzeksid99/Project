@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  billing_service:
+    build:
+      context: ./order-service
+    ports:
+      - "50051:50051"
+  order_service:
+    build:
+      context: ./order-service-client
+    ports:
+      - "50052:50052"
